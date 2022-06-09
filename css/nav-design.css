@@ -1,0 +1,214 @@
+.navigation {
+    height: 70px;
+    background: black;
+    display:flex;
+  }
+  
+  nav {
+    float: left;
+    width:100%;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  
+  .nav-menu {
+    display:blocK;
+  }
+  
+  nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    background:black;
+  }
+  
+  nav ul li {
+    float: left;
+    position: relative;
+  }
+  
+  nav ul li a {
+    display: block;
+    padding: 0 20px;
+    line-height: 70px;
+    color: #ffffff;
+    text-decoration: none;
+  }
+  
+  nav ul li a:hover {
+    background: #212121;
+    color: #ffffff;
+  }
+  
+  nav ul li a:not(:only-child):after {
+    padding-left: 5px;
+    content: ' ▾';
+  }
+  
+  .nav-submenu {
+    width:auto;
+    position: absolute;
+    z-index: 1;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+    width: auto;
+    display: none;
+  }
+  
+  .nav-submenu li {
+     width: 100%;
+     white-space: nowrap;
+  }
+  
+  .nav-movil {
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: black;
+    height: 70px;
+  }
+  
+  
+  #nav-boton {
+    position: absolute;
+    right: 20px;
+    top: 25px;
+    cursor: pointer;
+    width:20px;
+    height: 10px;
+    padding: 5px 15px 15px 0px;
+    z-index:1;
+  }
+  
+  #nav-boton span,
+  #nav-boton span:after,
+  #nav-boton span:before {
+    transition: all 500ms ease-in-out;
+    border-radius: 1px;
+    height: 5px;
+    width: 40px;
+    position: absolute;
+    display: block;
+    content: "";
+    background: #fff;
+  }
+  
+  #nav-boton span:before {
+    top: -10px;
+  }
+  #nav-boton span:after {
+    bottom: -10px;
+  }
+  
+  #nav-boton.activo span {
+    background-color: transparent;
+  }
+  
+  #nav-boton.activo span:before,
+  #nav-boton.activo span:after {
+    top: 0;
+  }
+  
+  #nav-boton.activo span:after {
+    transform: rotate(-45deg);
+  }
+  
+  #nav-boton.activo span:before {
+    transform: rotate(45deg);
+  }
+
+/*  CSS del logo animado    */
+
+  .logo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+  .olaje{
+    font-size: 1.6rem;
+    position: absolute;
+    top:0;
+    left: 20px;
+}
+
+.border-logo{
+    color:white;
+    text-shadow: -1px -1px 0 rgb(27, 27, 27),
+    1px -1px 0 rgb(27, 27, 27),
+    1px 1px 0 rgb(27, 27, 27),
+    -1px 1px 0 rgb(27, 27, 27);
+}
+.wave-logo{
+    color:rgb(240, 168, 0);
+    animation: wave 3s ease-in-out infinite;
+}
+
+@keyframes wave{
+    0%, 100%{
+        clip-path: polygon(
+            0% 47%,
+            10% 48%,
+            33% 54%,
+            54% 60%,
+            70% 61%,
+            84% 59%,
+            100% 52%,
+            100% 100%,
+            0% 100%
+        );
+    }
+    50%{
+        clip-path: polygon(
+            0% 60%,
+            15% 65%,
+            34% 66%,
+            51% 62%,
+            67% 50%,
+            84% 45%,
+            100% 46%,
+            100% 100%,
+            0% 100%
+        );
+    }
+}
+
+@media screen and (max-width: 979px) {
+  .nav-movil {
+    display: block;
+  }
+
+  .nav-menu {
+    display: none;
+    margin-top: 70px;
+    z-index: 1;
+  }
+  
+  .nav-menu li {
+    float: none;
+  }
+  .nav-menu li a {
+    padding: 20px;
+    line-height: 20px;
+  }
+  .nav-menu li ul li a {
+    padding-left: 30px;
+  }
+  
+  .nav-submenu {
+    position: static;
+  }
+}
+
+@media screen and (min-width: 980px) {
+  .navigation {
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .nav-menu {
+    display: block !important;
+  }  
+}

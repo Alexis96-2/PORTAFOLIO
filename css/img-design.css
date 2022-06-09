@@ -1,0 +1,55 @@
+.banner{
+    border: 1px solid black;
+}
+
+.container-diseños{
+    display:flex;
+}
+
+.container-img{
+    box-shadow: 0 8px 10px 0 rgba(0,0,0,0.5);
+    display: flex;
+    margin: 0;
+    margin-top: 1rem;
+}
+
+@media screen and (max-width: 979px) {
+    .container-diseños{
+        flex-direction: column;
+        height: 100%;
+    }
+    .banner{
+        width: 100%;
+    }
+    .container-img{
+        display: flex;
+        width: 100%;
+    }
+}
+
+.grayscale { 
+    width: 30px;
+    /*filter: grayscale(200%); */
+}
+.grayscale-blanc{
+    width: 30px;
+    filter: invert(1);
+}
+
+@media screen and (min-width: 980px) {
+    .container-diseños{
+        justify-content: space-between;/* Logra gracias a flex, uno a la izquierda y otro a la derecha*/
+        align-items: center;
+        flex-wrap: wrap;
+        padding-bottom: 1rem;
+    }
+    .banner{
+        margin-bottom: 1rem;
+        width:50%;
+        position: relative;
+        left: 25%;
+    }
+    .container-img{
+        width: 32%;
+    }
+}

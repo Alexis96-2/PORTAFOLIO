@@ -1,0 +1,124 @@
+h2{
+    font-size: 2rem;
+}
+
+.text-presentation p{
+    display: flex;
+    font-size: 20px;
+
+}
+
+
+.grafica{
+    display: flex;
+}
+
+.calendario{
+    text-align: center;
+    border-top: 3px solid black;
+    border-bottom: 3px solid black;
+    border-left: 3px solid black;
+    border-right: 3px solid black;
+    border-radius: 16px;
+}
+.calendario h1{
+    font-size: 20px;
+}
+.calendario ol{
+list-style: none;
+display: grid;
+grid-template-columns: repeat(7, 1fr);
+padding: 0;
+text-align: right;
+background-color: #e3f6f5;
+border-top: 3px solid black;
+    border-bottom: 3px solid black;
+    border-left: 3px solid black;
+    border-right: 3px solid black;
+    border-radius: 8px;
+}
+.first-day{
+    grid-column-start: 3;
+}
+.day-name{
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    background-color: #e3e3e3;
+    font-weight: bold;
+    text-align: center;
+}
+.numbre-day{
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+}
+.born{
+    background-color: red;
+    color: white;
+}
+
+@media screen and (max-width: 979px) {
+    #map{
+        height: 200px;
+        width: 100%;
+    }
+    .graphic{
+        display:block;
+    }
+    .grafica{
+        width: 100%;
+        height: 300px;
+    }
+    .calendario{
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 980px) {
+    #map{
+        height: 200px;
+        width: 400px;
+    }
+    .elementos-chidos{
+        display:flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    .calendario{
+        width: 300px;
+    }
+    .container-presentation{
+        display:flex;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    .text-presentation{
+        font-family: Tahoma;
+        margin: 10px;
+        width: 65%;
+    }
+    .sobremi{
+        display:flex;
+        justify-content: space-between;/* Logra gracias a flex, uno a la izquierda y otro a la derecha*/
+        align-items: center;
+        flex-wrap: wrap;
+        box-shadow: 6px 8px 16px 6px rgba(0,0,0,0.2);
+    }
+    .graphic{
+        display:flex;
+        justify-content: space-between;/* Logra gracias a flex, uno a la izquierda y otro a la derecha*/
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    .grafica{
+        width: 50%;
+        height: 300px;
+    }
+}
+#map { 
+    z-index: 1;
+}
